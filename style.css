@@ -1,0 +1,138 @@
+body {
+  margin: 0;
+  font-family: 'Georgia', serif;
+  background: linear-gradient(-45deg, #ff9a9e, #fad0c4, #ffdde1, #ffc3a0);
+  background-size: 400% 400%;
+  animation: gradientShift 15s ease infinite;
+  overflow: hidden;
+  color: white;
+}
+
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+#bg-music {
+  display: none;
+}
+
+.hearts-container {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.heart {
+  position: absolute;
+  bottom: -20px;
+  animation: floatUp linear infinite;
+  text-shadow: 0 0 15px #ff4b6e, 0 0 30px #ff4b6e;
+}
+
+@keyframes floatUp {
+  0% { transform: translateY(0) scale(1); }
+  100% { transform: translateY(-100vh) scale(1.6); opacity: 0; }
+}
+
+.envelope-wrapper {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.envelope {
+  width: 320px;
+  height: 220px;
+  background: #f8e8ee;
+  border-radius: 10px;
+  position: relative;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.4);
+}
+
+.flap {
+  width: 100%;
+  height: 110px;
+  background: crimson;
+  clip-path: polygon(0 0, 50% 100%, 100% 0);
+}
+
+.seal {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #ff4b6e;
+  color: white;
+  padding: 12px 25px;
+  border-radius: 30px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 0 25px rgba(255,75,110,0.8);
+  transition: 0.3s;
+}
+
+.seal:hover {
+  transform: translateX(-50%) scale(1.1);
+}
+
+.letter-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.9);
+  background: white;
+  color: #333;
+  width: 80%;
+  max-width: 650px;
+  padding: 50px;
+  border-radius: 15px;
+  box-shadow: 0 30px 80px rgba(0,0,0,0.6);
+  text-align: center;
+  opacity: 0;
+  transition: 0.6s ease;
+}
+
+.letter-page {
+  display: none;
+  animation: fadeIn 0.6s ease;
+}
+
+.letter-page.active {
+  display: block;
+}
+
+button {
+  margin-top: 25px;
+  padding: 12px 25px;
+  border: none;
+  background: #ff4b6e;
+  color: white;
+  border-radius: 30px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: #ff1e4d;
+  transform: scale(1.05);
+}
+
+.signature {
+  margin-top: 30px;
+  font-style: italic;
+}
+
+.hidden {
+  display: none;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(15px); }
+  to { opacity: 1; transform: translateY(0); }
+}

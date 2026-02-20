@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For You ❤️</title>
+<link rel="stylesheet" href="style.css">
+<script defer src="script.js"></script>
+</head>
+<body>
+
+<iframe 
+  src="https://www.youtube.com/embed/2Vv-BfVoq4g?autoplay=1&loop=1&playlist=2Vv-BfVoq4g"
+  allow="autoplay"
+  id="bg-music">
+</iframe>
+
+<div class="hearts-container"></div>
+
+<div class="envelope-wrapper" id="envelopeWrapper">
+  <div class="envelope">
+    <div class="flap"></div>
+    <div class="seal" onclick="openLetter()">Click To Open ❤️</div>
+  </div>
+</div>
+
+<div class="letter-container hidden" id="letterContainer">
+
+  <div class="letter-page active">
+    <h2>My Dearest Shattoh 💌</h2>
+    <p>Sabse pehle… bas shanti se paper dena.</p>
+    <p>Tension lene ki bilkul zarurat nahi hai.</p>
+    <p>Main yahin hoon. Hamesha.</p>
+    <button onclick="nextPage()">Next ➜</button>
+  </div>
+
+  <div class="letter-page">
+    <p>Mujhe pata hai kabhi kabhi dimaag heavy ho jata hai.</p>
+    <p>Thoughts rukte hi nahi.</p>
+    <p>Par yaad rakhna… tum akeli nahi ho.</p>
+    <button onclick="nextPage()">Next ➜</button>
+  </div>
+
+  <div class="letter-page">
+    <p>Main tumhara pressure nahi banna chahta.</p>
+    <p>Main tumhari peace banna chahta hoon.</p>
+    <p>Main tumhara safe place banna chahta hoon.</p>
+    <button onclick="nextPage()">Next ➜</button>
+  </div>
+
+  <div class="letter-page">
+    <p>Jab tum smile karti ho, mujhe sukoon milta hai.</p>
+    <p>Jab tum tension leti ho, mujhe bhi feel hota hai.</p>
+    <button onclick="nextPage()">Next ➜</button>
+  </div>
+
+  <div class="letter-page">
+    <p>Main zabardasti nahi karna chahta.</p>
+    <p>Bas ek sachcha sa place chahta hoon tumhare dil mein.</p>
+    <button onclick="nextPage()">Next ➜</button>
+  </div>
+
+  <div class="letter-page">
+    <h3>Best of Luck for Tomorrow 🌟</h3>
+    <p>Tum exam se strong ho.</p>
+    <p>Main tum par proud hoon.</p>
+    <button onclick="showSurprise()">Final Surprise ❤️</button>
+  </div>
+
+  <div class="letter-page hidden" id="surprisePage">
+    <h2>Ek Last Baat… 💖</h2>
+    <p>Chahe life mein kuch bhi ho,</p>
+    <p>Main tumhara bura kabhi nahi chaahunga.</p>
+    <p>Main hamesha support karunga.</p>
+    <p>Main tumhari tension ka reason nahi banna chahta.</p>
+    <p>Bas dil se chahta hoon… tum mujhe choose karo.</p>
+    <p>Zabardasti se nahi. Darr se nahi.</p>
+    <p>Bas apne dil se.</p>
+    <p class="signature">Hamesha shanti se ❤️</p>
+  </div>
+
+</div>
+
+</body>
+</html>
