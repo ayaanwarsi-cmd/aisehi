@@ -61,3 +61,20 @@ function showSurprise() {
   document.getElementById("surprisePage").classList.remove("hidden");
   document.getElementById("surprisePage").classList.add("active");
 }
+
+function createSorryText() {
+  const text = document.createElement("div");
+  text.classList.add("sorry-text");
+  text.innerHTML = "I'M SORRY ❤️";
+
+  text.style.left = Math.random() * 80 + "vw";
+  text.style.animationDuration = (Math.random() * 8 + 12) + "s";
+
+  document.querySelector(".sorry-bg").appendChild(text);
+
+  setTimeout(() => {
+    text.remove();
+  }, 15000);
+}
+
+setInterval(createSorryText, 2000);
