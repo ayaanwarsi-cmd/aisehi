@@ -1,7 +1,7 @@
 body {
   margin: 0;
   font-family: 'Georgia', serif;
-  background: linear-gradient(-45deg, #ff9a9e, #fad0c4, #ffdde1, #ffc3a0);
+  background: linear-gradient(-45deg, #141E30, #243B55, #1e3c72, #2a5298);
   background-size: 400% 400%;
   animation: gradientShift 15s ease infinite;
   overflow: hidden;
@@ -24,6 +24,7 @@ body {
   height: 100%;
   pointer-events: none;
   overflow: hidden;
+  z-index: 2;
 }
 
 .heart {
@@ -135,4 +136,40 @@ button:hover {
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(15px); }
   to { opacity: 1; transform: translateY(0); }
+}
+
+.sorry-text {
+  position: absolute;
+  bottom: -80px;
+  font-size: 70px;
+  font-weight: bold;
+  color: rgba(0, 0, 0, 0.3); /* BLACK */
+  letter-spacing: 6px;
+  white-space: nowrap;
+  animation: floatSorry linear infinite;
+}
+
+@keyframes floatSorry {
+  0% {
+    transform: translateY(0);
+    opacity: 0;
+  }
+  30% {
+    opacity: 0.25;
+  }
+  100% {
+    transform: translateY(-110vh);
+    opacity: 0;
+  }
+}
+
+.sorry-bg {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 1;
 }
